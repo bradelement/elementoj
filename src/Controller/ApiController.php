@@ -5,6 +5,6 @@ class ApiController extends BaseController
 {
     public function blank($request, $response, $args)
     {
-        $this->view->render([]);
+        return $this->rpc->request('page', array());
     }
 }

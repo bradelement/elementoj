@@ -3,6 +3,7 @@ use App\Bootstrap\DependencyProvider;
 use App\Middleware\Log;
 use App\Controller\ApiController;
 use App\View\ApiView;
+use App\Rpc\SinaRpc;
 
 //route
 $app->group('/api',  function(){
@@ -24,3 +25,7 @@ $container['view'] = function ($c) {
 // $container['mqModel'] = function ($c) {
 //     return new MqModel($c);
 // };
+//Rpc
+$container['rpc'] = function ($c) {
+    return new SinaRpc($c);
+};

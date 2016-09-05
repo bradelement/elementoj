@@ -17,7 +17,7 @@ class BaseRpc extends IocBase
     protected $logger;
 
     protected $base_uri = array();
-    protected $timeout = 10;
+    protected $timeout = 5;
     protected $api_list = array();
 
     public function __construct($ci)
@@ -86,7 +86,7 @@ class BaseRpc extends IocBase
         return array();
     }
 
-    //---protected funciton begins---
+    //-----protected funciton begins-----
     protected function merge_option($default, $option)
     {
         if (!is_array($option)) {
