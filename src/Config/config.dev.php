@@ -2,6 +2,7 @@
 
 return array(
     //slim
+    'addContentLengthHeader' => true,
     'displayErrorDetails' => true,
     'determineRouteBeforeAppMiddleware' => true,
     //logger
